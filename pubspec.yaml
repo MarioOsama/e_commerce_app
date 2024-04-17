@@ -31,7 +31,7 @@ flutter:
       fonts:
         - asset: assets/fonts/Inter-VariableFont_slnt,wght.ttf
 flutter_assets:
-  assets_path: assets/svg/
-  output_path: lib/core/utils/assets
-  filename: app_assets.dart
-  field_prefix:
+  assets_path: assets/img/
+  output_path: lib/core/utils/assets/
+  filename: app_images.dart
+  field_prefix: ""
