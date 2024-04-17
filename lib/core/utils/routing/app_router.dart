@@ -2,7 +2,8 @@ import 'package:e_commerce_app/core/utils/routing/app_routes.dart';
 import 'package:flutter/material.dart';
 
 class AppRouter {
-  const AppRouter();
+  final bool isFirstTime;
+  const AppRouter({required this.isFirstTime});
 
   Route onGenerateRoute(RouteSettings settings) {
     switch (settings.name) {
