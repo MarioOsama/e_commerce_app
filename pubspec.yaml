@@ -24,7 +24,7 @@ flutter_launcher_icons:
 flutter:
   uses-material-design: true
   assets:
-    - assets/images/
+    - assets/svg/
     - assets/icons/
   # fonts:
   #   - family: Schyler
@@ -37,3 +37,8 @@ flutter:
   #       - asset: fonts/TrajanPro.ttf
   #       - asset: fonts/TrajanPro_Bold.ttf
   #         weight: 700
+flutter_assets:
+  assets_path: assets/svg/
+  output_path: lib/core/utils/assets
+  filename: app_assets.dart
+  field_prefix:
