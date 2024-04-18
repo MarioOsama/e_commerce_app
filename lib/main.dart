@@ -6,7 +6,7 @@ import 'package:flutter/material.dart';
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
 
-// To check if the user is a first time user
+  // To check if the user is a first time user
   bool isFirstTime = await userStatus;
   AppRouter appRouter = AppRouter(isFirstTime: isFirstTime);
   runApp(

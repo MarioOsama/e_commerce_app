@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class AppColors {
+abstract class AppColors {
   // * Convert Color From Hex #FFFFFF to Flutter 0xFFFFFFFF
   static Color colorFromHex(String hexColor, [String opacity = 'FF']) {
     /// [hexColor] #ffffff
@@ -21,6 +21,11 @@ class AppColors {
   static final Color gray50 = colorFromHex('#F6F7F7');
   static final Color white = colorFromHex('#ffffff');
   static final Color red600 = colorFromHex('#EC1B40');
+  static final Color contentPrimary = colorFromHex('#212429');
+  static final Color contentTeritary = colorFromHex('#B0B5B9');
+  static final Color contentSecondary = colorFromHex('#868D94');
+  static final Color contentSale = colorFromHex('#FA254C');
+  static final Color backgroundSecondary = colorFromHex('#F5F5F5');
 
   static final List<Color> linearBoarding = [Colors.black, Colors.white];
 }
