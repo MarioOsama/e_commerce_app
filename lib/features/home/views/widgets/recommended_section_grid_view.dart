@@ -1,5 +1,5 @@
 import 'package:e_commerce_app/core/utils/models/product_model.dart';
-import 'package:e_commerce_app/features/home/views/widgets/product_card.dart';
+import 'package:e_commerce_app/core/utils/widgets/product_card.dart';
 import 'package:flutter/material.dart';
 
 class RecommendedSectionGridView extends StatelessWidget {
@@ -88,6 +88,7 @@ class RecommendedSectionGridView extends StatelessWidget {
       itemCount: products.length,
       gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
         crossAxisCount: 2,
+        childAspectRatio: 0.75,
         crossAxisSpacing: 16,
         mainAxisSpacing: 16,
       ),

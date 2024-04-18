@@ -4,6 +4,7 @@ import 'package:e_commerce_app/core/utils/theming/app_colors.dart';
 import 'package:e_commerce_app/core/utils/theming/app_text_style.dart';
 import 'package:e_commerce_app/features/home/views/widgets/fav_button.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 
 class ProductCard extends StatelessWidget {
   const ProductCard({
@@ -18,9 +19,7 @@ class ProductCard extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Expanded(
-          child: _buildCardHeader(),
-        ),
+        Expanded(child: _buildCardHeader()),
         _buildCardText(context),
       ],
     );
@@ -36,8 +35,10 @@ class ProductCard extends StatelessWidget {
             color: AppColors.backgroundSecondary,
             borderRadius: BorderRadius.circular(24),
           ),
-          child: Image.asset(
-            product.images.first,
+          child: Center(
+            child: Image.asset(
+              product.images.first,
+            ),
           ),
         ),
         const Padding(
@@ -57,7 +58,7 @@ class ProductCard extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Text(
-            product.price.toStringAsFixed(2),
+            '\$${product.price.toStringAsFixed(2)}',
             style: AppTextStyle.styleHeading3Extrabold(context),
           ),
           verticalSpace(2),
