@@ -1,3 +1,8 @@
+import 'package:uuid/uuid.dart';
+
+const uuid = Uuid();
+
+// TODO: Add ID field to the model
 class ProductModel {
   final String category;
   final double price;
@@ -7,11 +12,13 @@ class ProductModel {
   final List<String> subCategories;
   final String description;
   final List<String> images;
+  final String? model;
 
   const ProductModel({
+    this.model,
+    this.oldPrice,
     required this.category,
     required this.price,
-    this.oldPrice,
     required this.name,
     required this.subCategories,
     required this.rating,

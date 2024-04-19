@@ -2,7 +2,8 @@ import 'package:e_commerce_app/core/utils/helpers/spacing.dart';
 import 'package:e_commerce_app/core/utils/models/product_model.dart';
 import 'package:e_commerce_app/core/utils/theming/app_colors.dart';
 import 'package:e_commerce_app/core/utils/theming/app_text_style.dart';
-import 'package:e_commerce_app/features/home/views/widgets/fav_button.dart';
+import 'package:e_commerce_app/core/utils/widgets/product_price.dart';
+import 'package:e_commerce_app/core/utils/widgets/rounded_button.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
@@ -43,7 +44,7 @@ class ProductCard extends StatelessWidget {
         ),
         const Padding(
           padding: EdgeInsets.only(top: 4.0, right: 4.0),
-          child: FavoriteButton(
+          child: RoundedButton(
             iconSize: 18,
           ),
         ),
@@ -57,10 +58,7 @@ class ProductCard extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text(
-            '\$${product.price.toStringAsFixed(2)}',
-            style: AppTextStyle.styleHeading3Extrabold(context),
-          ),
+          ProductPrice(product: product),
           verticalSpace(2),
           Text(
             product.name,
