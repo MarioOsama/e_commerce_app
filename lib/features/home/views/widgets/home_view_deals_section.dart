@@ -16,7 +16,7 @@ class HomeViewDealsSection extends StatefulWidget {
   final List<ProductModel> products = const [
     ProductModel(
       images: ['assets/img/Sony_Headphones_01.png'],
-      category: 'Microphones',
+      category: 'Headphones',
       name: 'RØDE PodMic',
       price: 108.20,
       description: 'Dynamic microphone, Speaker microphone',
@@ -26,7 +26,7 @@ class HomeViewDealsSection extends StatefulWidget {
     ),
     ProductModel(
       images: ['assets/img/Sony_Headphones_01.png'],
-      category: 'Microphones',
+      category: 'Headphones',
       name: 'RØDE PodMic',
       price: 349.99,
       description: 'Dynamic microphone, Speaker microphone',
@@ -35,7 +35,7 @@ class HomeViewDealsSection extends StatefulWidget {
     ),
     ProductModel(
       images: ['assets/img/Sony_Headphones_01.png'],
-      category: 'Microphones',
+      category: 'Headphones',
       name: 'RØDE PodMic',
       price: 349.99,
       description: 'Dynamic microphone, Speaker microphone',

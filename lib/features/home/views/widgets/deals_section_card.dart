@@ -2,7 +2,8 @@ import 'package:e_commerce_app/core/utils/helpers/spacing.dart';
 import 'package:e_commerce_app/core/utils/models/product_model.dart';
 import 'package:e_commerce_app/core/utils/theming/app_colors.dart';
 import 'package:e_commerce_app/core/utils/theming/app_text_style.dart';
-import 'package:e_commerce_app/features/home/views/widgets/fav_button.dart';
+import 'package:e_commerce_app/core/utils/widgets/product_price.dart';
+import 'package:e_commerce_app/core/utils/widgets/rounded_button.dart';
 import 'package:flutter/material.dart';
 
 class DealsSectionCard extends StatelessWidget {
@@ -38,7 +39,7 @@ class DealsSectionCard extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   _buildCardContent(context),
-                  const FavoriteButton(),
+                  const RoundedButton(),
                 ],
               ),
             ),
@@ -60,7 +61,9 @@ class DealsSectionCard extends StatelessWidget {
               .copyWith(color: AppColors.contentSecondary),
         ),
         verticalSpace(12.0),
-        _buildProductPrice(context),
+        ProductPrice(
+          product: product,
+        ),
         verticalSpace(4.0),
         Text(
           product.name,
@@ -88,45 +91,6 @@ class DealsSectionCard extends StatelessWidget {
       ),
       maxLines: 2,
       overflow: TextOverflow.ellipsis,
-    );
-  }
-
-  Widget _buildProductPrice(BuildContext context) {
-    final bool isSale = product.oldPrice != null;
-    if (isSale) {
-      return _buildSalePrice(context);
-    } else {
-      return _buildRegularPrice(context);
-    }
-  }
-
-  Text _buildRegularPrice(BuildContext context) {
-    return Text(
-      product.price.toString(),
-      style: AppTextStyle.styleHeading3Extrabold(context).copyWith(
-        color: AppColors.contentSale,
-      ),
-    );
-  }
-
-  Row _buildSalePrice(BuildContext context) {
-    return Row(
-      children: [
-        Text(
-          '\$${product.price.toStringAsFixed(2)}',
-          style: AppTextStyle.styleHeading3Extrabold(context).copyWith(
-            color: AppColors.contentSale,
-          ),
-        ),
-        horizontalSpace(4.0),
-        Text(
-          '\$${product.oldPrice!.toStringAsFixed(2)}',
-          style: AppTextStyle.styleCaption2(context).copyWith(
-            color: AppColors.contentSecondary,
-            decoration: TextDecoration.lineThrough,
-          ),
-        ),
-      ],
     );
   }
 }
