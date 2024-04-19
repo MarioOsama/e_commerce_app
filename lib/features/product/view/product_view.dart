@@ -47,7 +47,7 @@ class ProductView extends StatelessWidget {
       backButton: IconButton(
         alignment: Alignment.topCenter,
         icon: const Icon(
-          Icons.arrow_back_ios_new_rounded,
+          Icons.keyboard_arrow_left_outlined,
           size: 20,
         ),
         onPressed: () {

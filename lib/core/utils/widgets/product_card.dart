@@ -3,7 +3,7 @@ import 'package:e_commerce_app/core/utils/models/product_model.dart';
 import 'package:e_commerce_app/core/utils/theming/app_colors.dart';
 import 'package:e_commerce_app/core/utils/theming/app_text_style.dart';
 import 'package:e_commerce_app/core/utils/widgets/product_price.dart';
-import 'package:e_commerce_app/core/utils/widgets/rounded_button.dart';
+import 'package:e_commerce_app/core/utils/widgets/rounded_action_button.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
@@ -44,7 +44,7 @@ class ProductCard extends StatelessWidget {
         ),
         const Padding(
           padding: EdgeInsets.only(top: 4.0, right: 4.0),
-          child: RoundedButton(
+          child: RoundedActionButton(
             iconSize: 18,
           ),
         ),

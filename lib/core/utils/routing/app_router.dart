@@ -1,4 +1,5 @@
 import 'package:e_commerce_app/core/utils/routing/app_routes.dart';
+import 'package:e_commerce_app/features/favorite/view/favorite_view.dart';
 import 'package:e_commerce_app/features/home/views/home_view.dart';
 import 'package:e_commerce_app/features/product/view/product_view.dart';
 import 'package:flutter/material.dart';
@@ -27,7 +28,17 @@ class AppRouter {
       case AppRoutes.home:
         // Replace this with the home screen
         return MaterialPageRoute(
+          builder: (_) => const HomeView(),
+        );
+      case AppRoutes.product:
+        // Replace this with the home screen
+        return MaterialPageRoute(
           builder: (_) => const ProductView(),
+        );
+      case AppRoutes.favorite:
+        // Replace this with the home screen
+        return MaterialPageRoute(
+          builder: (_) => const FavoriteView(),
         );
       default:
         return MaterialPageRoute(

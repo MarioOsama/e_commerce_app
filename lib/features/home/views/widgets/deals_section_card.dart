@@ -3,7 +3,7 @@ import 'package:e_commerce_app/core/utils/models/product_model.dart';
 import 'package:e_commerce_app/core/utils/theming/app_colors.dart';
 import 'package:e_commerce_app/core/utils/theming/app_text_style.dart';
 import 'package:e_commerce_app/core/utils/widgets/product_price.dart';
-import 'package:e_commerce_app/core/utils/widgets/rounded_button.dart';
+import 'package:e_commerce_app/core/utils/widgets/rounded_action_button.dart';
 import 'package:flutter/material.dart';
 
 class DealsSectionCard extends StatelessWidget {
@@ -39,7 +39,7 @@ class DealsSectionCard extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   _buildCardContent(context),
-                  const RoundedButton(),
+                  const RoundedActionButton(),
                 ],
               ),
             ),
