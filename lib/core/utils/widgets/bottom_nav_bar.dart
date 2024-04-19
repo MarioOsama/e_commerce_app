@@ -1,6 +1,7 @@
 // ignore_for_file: library_private_types_in_public_api
 
 import 'package:e_commerce_app/core/utils/theming/app_colors.dart';
+import 'package:e_commerce_app/features/home/views/home_view.dart';
 import 'package:flutter/material.dart';
 
 class BottomNavBar extends StatefulWidget {
@@ -14,9 +15,7 @@ class _BottomNavBarState extends State<BottomNavBar> {
   int selectedIndex = 0;
 
   static final List<Widget> appPages = <Widget>[
-    const Scaffold(
-      backgroundColor: Colors.amberAccent,
-    ),
+    const HomeView(),
     const Scaffold(
       backgroundColor: Colors.red,
     ),
@@ -54,7 +53,7 @@ class _BottomNavBarState extends State<BottomNavBar> {
             label: 'Browse',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.favorite_outlined),
+            icon: Icon(Icons.favorite_outline),
             label: 'Favorites',
           ),
           BottomNavigationBarItem(
@@ -62,7 +61,7 @@ class _BottomNavBarState extends State<BottomNavBar> {
             label: 'Cart',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.person_outlined),
+            icon: Icon(Icons.person_outline),
             label: 'Profile',
           ),
         ],
