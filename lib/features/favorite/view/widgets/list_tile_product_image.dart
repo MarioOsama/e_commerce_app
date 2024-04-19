@@ -15,13 +15,13 @@ class ListTileProductImage extends StatelessWidget {
       aspectRatio: 0.9,
       child: Container(
         margin: const EdgeInsets.all(7.0),
-        padding: const EdgeInsets.all(2),
         decoration: BoxDecoration(
           color: AppColors.backgroundSecondary,
           borderRadius: BorderRadius.circular(24),
-        ),
-        child: Image.asset(
-          productImage,
+          image: DecorationImage(
+            image: AssetImage(productImage),
+            fit: BoxFit.fill,
+          ),
         ),
       ),
     );
