@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  // This is a fork
+  // This is a Fork
 
 
   // To check if the user is a first time user
