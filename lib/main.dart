@@ -3,6 +3,7 @@ import 'package:e_commerce_app/core/utils/routing/app_router.dart';
 import 'package:e_commerce_app/e_commerce_app.dart';
 import 'package:flutter/material.dart';
 
+
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
 

@@ -1,4 +1,4 @@
-import 'package:e_commerce_app/core/utils/widgets/rounded_action_button.dart';
+import 'package:e_commerce_app/features/browse/browse_result/view/widgets/rounded_action_button.dart';
 import 'package:flutter/material.dart';
 
 class ActionButtons extends StatelessWidget {
