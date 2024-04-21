@@ -1,5 +1,7 @@
 import 'package:bloc/bloc.dart';
 
+import '../../core/utils/theming/app_images.dart';
+
 class OnBoardingCubit extends Cubit<int> {
   OnBoardingCubit() : super(0);
   void nextIndex() {
@@ -10,9 +12,9 @@ class OnBoardingCubit extends Cubit<int> {
 
   String onBorderImages() {
     List<String> imgList = [
-      "assets/img/1.jpg",
-      "assets/img/3.jpg",
-      "assets/img/4.jpg",
+      AppImages.onBoardingScreennbor1,
+      AppImages.onBoardingScreennbor2,
+      AppImages.onBoardingScreennbor3,
     ];
     return imgList[state];
   }
