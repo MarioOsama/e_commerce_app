@@ -4,6 +4,8 @@ import 'package:e_commerce_app/features/home/views/home_view.dart';
 import 'package:e_commerce_app/features/product/view/product_view.dart';
 import 'package:flutter/material.dart';
 
+import '../../../view/on_bording/onbording_view.dart';
+
 class AppRouter {
   final bool isFirstTime;
   const AppRouter({required this.isFirstTime});
@@ -13,8 +15,7 @@ class AppRouter {
       case AppRoutes.onBoarding:
         // Replace this with the on boarding screen
         return MaterialPageRoute(
-            builder: (_) => const Scaffold(
-                body: Center(child: Text('On Boarding Screen'))));
+            builder: (_) => const Scaffold(body: OnBordingView()));
       case AppRoutes.register:
         // Replace this with the register screen
         return MaterialPageRoute(

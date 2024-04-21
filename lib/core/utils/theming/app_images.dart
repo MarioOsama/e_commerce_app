@@ -26,5 +26,12 @@ class AppImages {
   static const String googleLogo = 'assets/img/Google.svg';
   static const String appleLogo = 'assets/img/apple.svg';
 
+  static const String onBoardingScreennbor4 =
+      "assets/img/marissa-grootes-D4jRahaUaIc-unsplash.jpg";
+
+  static const String appIconImage = 'assets/img/app_icon_image.png';
+  static const String googleLogo = 'assets/img/Google.svg';
+  static const String appleLogo = 'assets/img/apple.svg';
+
   static const String facebookLogo = 'assets/img/facebook.svg';
 }

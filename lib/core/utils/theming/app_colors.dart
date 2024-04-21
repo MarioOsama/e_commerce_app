@@ -27,5 +27,15 @@ abstract class AppColors {
   static final Color contentSale = colorFromHex('#FA254C');
   static final Color backgroundSecondary = colorFromHex('#F5F5F5');
 
-  static final List<Color> linearBoarding = [Colors.black, Colors.white];
+  static final List<Color> linearBoarding = [
+    Colors.black,
+    Colors.black,
+    Colors.black,
+    Colors.black,
+    Colors.black.withOpacity(0.5),
+    Colors.black.withOpacity(0.5),
+    Colors.black.withOpacity(0.2),
+    Colors.transparent,
+    Colors.transparent,
+  ];
 }
