@@ -1,7 +1,7 @@
-import 'package:e_commerce_app/view/cart/widgets/btn_plus_and_minus_product.dart';
-import 'package:e_commerce_app/view/cart/widgets/btn_product_more.dart';
-import 'package:e_commerce_app/view/cart/widgets/product_details.dart';
-import 'package:e_commerce_app/view/cart/widgets/product_image.dart';
+import 'package:e_commerce_app/view/cart/widgets/list_view_product_cart/btn_plus_and_minus_product.dart';
+import 'package:e_commerce_app/view/cart/widgets/list_view_product_cart/btn_product_more.dart';
+import 'package:e_commerce_app/view/cart/widgets/list_view_product_cart/product_details.dart';
+import 'package:e_commerce_app/view/cart/widgets/list_view_product_cart/product_image.dart';
 import 'package:flutter/material.dart';
 
 class CustomProductCart extends StatelessWidget {
@@ -30,12 +30,12 @@ class CustomProductCart extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.end,
               children: [
-                // * Bottun Product More (Delete, ....)
+                // * Product More Bottun(Delete, ....)
                 BtnProductMore(),
                 SizedBox(
                   height: 20,
                 ),
-                // * Bottun For Plus And Minus Product Count in Cart
+                // * Button For Plus And Minus Product Count in Cart
                 BtnPlusAndMinusProduct(),
               ],
             ),

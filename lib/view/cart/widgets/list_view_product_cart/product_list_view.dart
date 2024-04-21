@@ -1,7 +1,7 @@
-import 'package:e_commerce_app/view/cart/widgets/custom_product_cart.dart';
+import 'package:e_commerce_app/view/cart/widgets/list_view_product_cart/custom_product_cart.dart';
 import 'package:flutter/material.dart';
 
-import '../../../model/product_model.dart';
+import '../../../../model/product_model.dart';
 
 class ProductListView extends StatelessWidget {
   const ProductListView({

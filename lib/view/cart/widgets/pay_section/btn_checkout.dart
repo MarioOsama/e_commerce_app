@@ -1,3 +1,4 @@
+import 'package:e_commerce_app/core/utils/theming/app_text_style.dart';
 import 'package:flutter/material.dart';
 
 class BtnCheckout extends StatelessWidget {
@@ -15,13 +16,10 @@ class BtnCheckout extends StatelessWidget {
                 elevation: 0,
                 backgroundColor: Colors.black),
             onPressed: () {},
-            child: const Text(
+            child: Text(
               "Checkout",
-              style: TextStyle(
+              style: AppTextStyle.styleHeading2Strikethrough(context).copyWith(
                 color: Colors.white,
-                fontSize: 20,
-                fontFamily: 'Inter',
-                fontWeight: FontWeight.w400,
               ),
             )),
       ),

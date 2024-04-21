@@ -1,3 +1,5 @@
+import 'package:e_commerce_app/core/utils/theming/app_colors.dart';
+import 'package:e_commerce_app/core/utils/theming/app_text_style.dart';
 import 'package:flutter/material.dart';
 
 class BtnPlusAndMinusProduct extends StatelessWidget {
@@ -10,24 +12,25 @@ class BtnPlusAndMinusProduct extends StatelessWidget {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
+        // * Minus Button
         Container(
           alignment: Alignment.center,
           width: 35,
           height: 35,
           decoration: BoxDecoration(
-              color: Color(0xFFF5F5F5),
+              color: const Color(0xFFF5F5F5),
               borderRadius: BorderRadius.circular(12)),
-          child: const Text(
+          child: Text(
             "-",
-            style: TextStyle(
-              color: Color(0xFFC9CCCF),
+            style: AppTextStyle.styleCaption2(context).copyWith(
+              color: AppColors.gray200,
               fontSize: 15,
-              fontFamily: 'Montserrat',
-              fontWeight: FontWeight.w600,
             ),
           ),
         ),
+        // * Count Text
         const Text("1"),
+        // * Plus Button
         Container(
           alignment: Alignment.center,
           width: 35,
@@ -35,13 +38,11 @@ class BtnPlusAndMinusProduct extends StatelessWidget {
           decoration: BoxDecoration(
               color: const Color(0xFF495057),
               borderRadius: BorderRadius.circular(12)),
-          child: const Text(
+          child: Text(
             "+",
-            style: TextStyle(
+            style: AppTextStyle.styleCaption2(context).copyWith(
               color: Colors.white,
               fontSize: 15,
-              fontFamily: 'Montserrat',
-              fontWeight: FontWeight.w600,
             ),
           ),
         ),
