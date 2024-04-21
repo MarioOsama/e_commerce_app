@@ -20,7 +20,7 @@ class TextWidget extends StatelessWidget {
               fontSize: 28,
             )),
         // * Subtitle
-        Text(context.read<OnBoardingCubit>().onBorderSuptitle(),
+        Text(context.read<OnBoardingCubit>().onBorderSubtitle(),
             style: AppTextStyle.styleBody2Medium(context).copyWith(
               color: Colors.white,
               fontSize: 18,
