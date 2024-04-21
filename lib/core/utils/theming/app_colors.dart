@@ -22,5 +22,15 @@ class AppColors {
   static final Color white = colorFromHex('#ffffff');
   static final Color red600 = colorFromHex('#EC1B40');
 
-  static final List<Color> linearBoarding = [Colors.black, Colors.white];
+  static final List<Color> linearBoarding = [
+    Colors.black,
+    Colors.black,
+    Colors.black,
+    Colors.black,
+    Colors.black.withOpacity(0.5),
+    Colors.black.withOpacity(0.5),
+    Colors.black.withOpacity(0.2),
+    Colors.transparent,
+    Colors.transparent,
+  ];
 }

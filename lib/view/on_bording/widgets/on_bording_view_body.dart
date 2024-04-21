@@ -1,3 +1,4 @@
+import 'package:e_commerce_app/core/utils/theming/app_colors.dart';
 import 'package:e_commerce_app/view/on_bording/widgets/foter.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -8,17 +9,6 @@ class OnBordingViewBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    var linearOnBord = [
-      Colors.black,
-      Colors.black,
-      Colors.black,
-      Colors.black,
-      Colors.black.withOpacity(0.5),
-      Colors.black.withOpacity(0.5),
-      Colors.black.withOpacity(0.2),
-      Colors.transparent,
-      Colors.transparent,
-    ];
     return BlocProvider(
       create: (context) => OnBoardingCubit(),
       child: BlocBuilder<OnBoardingCubit, int>(builder: (context, state) {
@@ -38,7 +28,7 @@ class OnBordingViewBody extends StatelessWidget {
                 gradient: LinearGradient(
                   begin: Alignment.bottomCenter,
                   end: Alignment.center,
-                  colors: linearOnBord,
+                  colors: AppColors.linearBoarding,
                 ),
               ),
             ),
