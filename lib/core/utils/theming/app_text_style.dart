@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'app_colors.dart';
 
-class AppTextStyle {
+abstract class AppTextStyle {
 // * Navbar icon description
   static TextStyle styleCaption2(context) {
     return TextStyle(

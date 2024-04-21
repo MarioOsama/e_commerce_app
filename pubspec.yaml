@@ -7,11 +7,16 @@ environment:
 dependencies:
   bloc: ^8.1.4
   cupertino_icons: null
+  expandable_page_view: ^1.0.17
   flutter:
     sdk: flutter
   flutter_bloc: ^8.1.5
   flutter_native_splash: ^2.4.0
   shared_preferences: ^2.2.3
+  svg_flutter: ^0.0.1
+  uuid: ^4.4.0
+  flutter_localizations:
+    sdk: flutter
 
 dev_dependencies:
   flutter_launcher_icons: null
@@ -28,14 +33,26 @@ flutter:
   uses-material-design: true
   assets:
     - assets/svg/
+    - assets/img/
     - assets/icons/
     - assets/img/
   fonts:
     - family: inter
       fonts:
-        - asset: assets/fonts/Inter-VariableFont_slnt,wght.ttf
+        - asset: assets/fonts/Inter-Regular.ttf
+        - asset: assets/fonts/Inter-Medium.ttf
+          weight: 500
+        - asset: assets/fonts/Inter-SemiBold.ttf
+          weight: 600
+        - asset: assets/fonts/Inter-Bold.ttf
+          weight: 700
+        - asset: assets/fonts/Inter-ExtraBold.ttf
+          weight: 800
+
 flutter_assets:
   assets_path: assets/img/
   output_path: lib/core/utils/assets/
   filename: app_images.dart
   field_prefix: ""
+flutter_intl:
+  enabled: true
