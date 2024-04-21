@@ -2,6 +2,8 @@ import 'package:e_commerce_app/controller/on_bording/on_boarding_cubit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
+import '../../../core/utils/theming/app_text_style.dart';
+
 class TextWidget extends StatelessWidget {
   const TextWidget({
     super.key,
@@ -13,17 +15,15 @@ class TextWidget extends StatelessWidget {
       return Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
         // * Title
         Text(context.read<OnBoardingCubit>().onBordertitle(),
-            style: const TextStyle(
+            style: AppTextStyle.styleBody2Medium(context).copyWith(
               color: Colors.white,
               fontSize: 28,
-              fontWeight: FontWeight.w500,
             )),
         // * Subtitle
         Text(context.read<OnBoardingCubit>().onBorderSuptitle(),
-            style: const TextStyle(
+            style: AppTextStyle.styleBody2Medium(context).copyWith(
               color: Colors.white,
               fontSize: 18,
-              fontWeight: FontWeight.w500,
             ))
       ]);
     });

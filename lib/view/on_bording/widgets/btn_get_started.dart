@@ -1,3 +1,4 @@
+import 'package:e_commerce_app/core/utils/theming/app_text_style.dart';
 import 'package:flutter/material.dart';
 
 class BtnGetStarted extends StatelessWidget {
@@ -14,13 +15,10 @@ class BtnGetStarted extends StatelessWidget {
               elevation: 0,
               backgroundColor: Colors.white),
           onPressed: () {},
-          child: const Text(
+          child: Text(
             "Get started",
-            style: TextStyle(
-              color: Colors.black,
+            style: AppTextStyle.styleHeading2Semibold(context).copyWith(
               fontSize: 15,
-              fontFamily: 'Montserrat',
-              fontWeight: FontWeight.w600,
             ),
           )),
     );
