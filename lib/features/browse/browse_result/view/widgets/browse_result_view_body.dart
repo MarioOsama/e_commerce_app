@@ -16,7 +16,7 @@ class BrowseResultViewBody extends StatelessWidget {
         padding: const EdgeInsets.symmetric(horizontal: 12),
         child: Column(
           children: [
-             verticalSpace(20),
+            verticalSpace(20),
             const BrowseResultHeader(),
             verticalSpace(40),
             Row(
@@ -24,7 +24,7 @@ class BrowseResultViewBody extends StatelessWidget {
                 Text(
                   "1331 Products",
                   style: AppTextStyle.styleBody2Medium(context)
-                      .copyWith(color: AppColors.gray700),
+                      .copyWith(color: AppColors.contentSecondary),
                 ),
                 const Spacer(),
                 Text(
@@ -37,12 +37,14 @@ class BrowseResultViewBody extends StatelessWidget {
                 ),
               ],
             ),
-                 verticalSpace(15),
-           const Expanded(child:  Padding(
-             padding: EdgeInsets.symmetric(horizontal: 10),
-             child: RecommendedSectionGridView(),
-           ),),
-                verticalSpace(20),
+            verticalSpace(15),
+            const Expanded(
+              child: Padding(
+                padding: EdgeInsets.symmetric(horizontal: 10),
+                child: RecommendedSectionGridView(),
+              ),
+            ),
+            verticalSpace(20),
           ],
         ),
       ),

@@ -1,5 +1,7 @@
+import 'package:e_commerce_app/core/utils/helpers/extensions.dart';
 import 'package:e_commerce_app/core/utils/helpers/spacing.dart';
 import 'package:e_commerce_app/core/utils/models/product_model.dart';
+import 'package:e_commerce_app/core/utils/routing/app_routes.dart';
 import 'package:e_commerce_app/core/utils/theming/app_colors.dart';
 import 'package:e_commerce_app/core/utils/theming/app_text_style.dart';
 import 'package:e_commerce_app/core/utils/widgets/product_price.dart';
@@ -16,34 +18,45 @@ class DealsSectionCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return AspectRatio(
-      aspectRatio: 2,
-      child: Container(
-        margin: const EdgeInsets.only(right: 8.0),
-        padding: const EdgeInsets.only(top: 8.0, right: 8.0),
-        decoration: BoxDecoration(
-          color: AppColors.backgroundSecondary,
-          borderRadius: BorderRadius.circular(24),
-        ),
-        child: Row(
-          children: [
-            Expanded(
-              child: Image.asset(
-                product.images.first,
+    return GestureDetector(
+      onTap: () {
+        // * Navigate to the product details screen
+        context.pushNamed(AppRoutes.product, arguments: product);
+      },
+      child: AspectRatio(
+        aspectRatio: 2,
+        child: Container(
+          margin: const EdgeInsets.symmetric(horizontal: 4.0),
+          padding: const EdgeInsets.only(top: 8.0, right: 8.0),
+          decoration: BoxDecoration(
+            color: AppColors.backgroundSecondary,
+            borderRadius: BorderRadius.circular(24),
+          ),
+          child: Row(
+            children: [
+              Expanded(
+                child: Image.asset(
+                  product.images.first,
+                ),
               ),
-            ),
-            horizontalSpace(8.0),
-            Expanded(
-              child: Row(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  _buildCardContent(context),
-                  const RoundedActionButton(),
-                ],
+              horizontalSpace(8.0),
+              Expanded(
+                child: Row(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Expanded(
+                      flex: 3,
+                      child: _buildCardContent(context),
+                    ),
+                    const Expanded(
+                      child: RoundedActionButton(),
+                    ),
+                  ],
+                ),
               ),
-            ),
-          ],
+            ],
+          ),
         ),
       ),
     );

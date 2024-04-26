@@ -7,14 +7,20 @@ class BrowseViewItem extends StatelessWidget {
   final String text;
   @override
   Widget build(BuildContext context) {
-    return  Padding(
+    return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 15),
       child: Row(
         children: [
-          Text(text,style: AppTextStyle.styleHeading2Extrabold(context),),
-         const Spacer(),
-         Icon(Icons.chevron_right_sharp,color: AppColors.black,size: 30,),
-
+          Text(
+            text,
+            style: AppTextStyle.styleHeading2Semibold(context),
+          ),
+          const Spacer(),
+          Icon(
+            Icons.chevron_right_sharp,
+            color: AppColors.black,
+            size: 30,
+          ),
         ],
       ),
     );

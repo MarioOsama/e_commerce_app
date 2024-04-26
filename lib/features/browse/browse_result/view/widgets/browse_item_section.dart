@@ -1,4 +1,6 @@
+import 'package:e_commerce_app/core/utils/helpers/extensions.dart';
 import 'package:e_commerce_app/core/utils/models/product_model.dart';
+import 'package:e_commerce_app/core/utils/routing/app_routes.dart';
 import 'package:e_commerce_app/core/utils/widgets/product_card.dart';
 import 'package:flutter/material.dart';
 
@@ -92,8 +94,14 @@ class RecommendedSectionGridView extends StatelessWidget {
         crossAxisSpacing: 16,
         mainAxisSpacing: 16,
       ),
-      itemBuilder: (context, index) => ProductCard(
-        product: products[index],
+      itemBuilder: (context, index) => GestureDetector(
+        onTap: () {
+          // * Navigate to the product details screen
+          context.pushNamed(AppRoutes.product, arguments: products[index]);
+        },
+        child: ProductCard(
+          product: products[index],
+        ),
       ),
     );
   }

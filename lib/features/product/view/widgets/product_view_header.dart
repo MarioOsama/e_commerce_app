@@ -18,7 +18,7 @@ class ProductViewHeader extends StatelessWidget {
       children: [
         AspectRatio(
           aspectRatio: 1,
-          child: ProductImage(product: product),
+          child: ProductImage(image: product.images.first),
         ),
         const ActionButtons(),
       ],

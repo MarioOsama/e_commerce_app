@@ -18,7 +18,6 @@ class DealsSectionPageView extends StatelessWidget {
     return ExpandablePageView.builder(
       controller: _pageController,
       allowImplicitScrolling: true,
-      animateFirstPage: true,
       scrollDirection: Axis.horizontal,
       itemCount: products.length,
       itemBuilder: (context, index) {

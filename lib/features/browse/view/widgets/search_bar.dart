@@ -3,7 +3,6 @@ import 'package:e_commerce_app/core/utils/theming/app_text_style.dart';
 import 'package:e_commerce_app/generated/l10n.dart';
 import 'package:flutter/material.dart';
 
-
 class SearchBarItem extends StatelessWidget {
   const SearchBarItem({super.key});
 
@@ -18,10 +17,14 @@ class SearchBarItem extends StatelessWidget {
             borderSide: BorderSide.none,
           ),
           hintText: S.of(context).search,
-          hintStyle:AppTextStyle.styleBody3(context).copyWith(color: AppColors.gray700),
-         suffixIcon: Icon(Icons.search,color: AppColors.gray700,),
-         filled: true,
-         fillColor: AppColors.gray50
+          hintStyle: AppTextStyle.styleBody3(context)
+              .copyWith(color: AppColors.contentSecondary),
+          suffixIcon: Icon(
+            Icons.search,
+            color: AppColors.contentSecondary,
+          ),
+          filled: true,
+          fillColor: AppColors.backgroundSecondary,
         ),
         cursorColor: AppColors.black,
       ),

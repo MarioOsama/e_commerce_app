@@ -1,5 +1,8 @@
+import 'package:e_commerce_app/core/utils/helpers/extensions.dart';
 import 'package:e_commerce_app/core/utils/models/product_model.dart';
+import 'package:e_commerce_app/core/utils/routing/app_routes.dart';
 import 'package:e_commerce_app/core/utils/widgets/product_card.dart';
+import 'package:e_commerce_app/features/product/view/product_view.dart';
 import 'package:flutter/material.dart';
 
 class RecommendedSectionGridView extends StatelessWidget {
@@ -83,8 +86,7 @@ class RecommendedSectionGridView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return GridView.builder(
-      padding: EdgeInsets.zero,
+    return SliverGrid.builder(
       itemCount: products.length,
       gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
         crossAxisCount: 2,
@@ -92,8 +94,13 @@ class RecommendedSectionGridView extends StatelessWidget {
         crossAxisSpacing: 16,
         mainAxisSpacing: 16,
       ),
-      itemBuilder: (context, index) => ProductCard(
-        product: products[index],
+      itemBuilder: (context, index) => GestureDetector(
+        onTap: () {
+          context.pushNamed(AppRoutes.product, arguments: products[index]);
+        },
+        child: ProductCard(
+          product: products[index],
+        ),
       ),
     );
   }

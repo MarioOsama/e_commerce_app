@@ -6,20 +6,9 @@ import 'package:e_commerce_app/features/product/view/widgets/product_view_text_c
 import 'package:flutter/material.dart';
 
 class ProductView extends StatelessWidget {
-  const ProductView({super.key});
+  const ProductView({super.key, required this.product});
 
-  static const ProductModel product = ProductModel(
-    images: ['assets/img/Sony_Headphones_01.png'],
-    category: 'Headphones',
-    name: 'SONY Premium Wireless Headphones',
-    price: 108.20,
-    description:
-        'The technology with two noise sensors and two microphones on each ear cup detects ambient noise and sends the data to the HD noise minimization processor QN1. Using a new algorithm, the QN1 then processes and minimizes noise for different acoustic environments in real time. Together with a new Bluetooth Audio SoC ',
-    subCategories: ['Dynamic microphone', 'Speaker microphone'],
-    // oldPrice: 199.99,
-    rating: 4.5,
-    model: 'WH-1000XM4, Black',
-  );
+  final ProductModel product;
 
   @override
   Widget build(BuildContext context) {
@@ -31,9 +20,9 @@ class ProductView extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              const ProductViewHeader(product: product),
+              ProductViewHeader(product: product),
               verticalSpace(16.0),
-              const ProductViewTextContent(product: product)
+              ProductViewTextContent(product: product)
             ],
           ),
         ),

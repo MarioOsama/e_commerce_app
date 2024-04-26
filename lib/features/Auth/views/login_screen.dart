@@ -1,9 +1,12 @@
+import 'package:e_commerce_app/core/utils/helpers/spacing.dart';
 import 'package:e_commerce_app/core/utils/strings/app_strings.dart';
 import 'package:e_commerce_app/core/utils/theming/app_colors.dart';
 import 'package:e_commerce_app/core/utils/theming/app_images.dart';
+import 'package:e_commerce_app/core/utils/theming/app_text_style.dart';
 import 'package:e_commerce_app/features/Auth/views/widgets/custom_elevated_bottom.dart';
 import 'package:e_commerce_app/features/Auth/views/widgets/custom_social_media_auth.dart';
 import 'package:e_commerce_app/features/Auth/views/widgets/custom_text_form_feild.dart';
+import 'package:e_commerce_app/features/Auth/views/widgets/sign_up_text_span.dart';
 import 'package:flutter/material.dart';
 
 class LoginScreen extends StatelessWidget {
@@ -13,11 +16,11 @@ class LoginScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     double height = MediaQuery.of(context).size.height;
     double width = MediaQuery.of(context).size.width;
-    return SafeArea(
-      child: Scaffold(
-        backgroundColor: Colors.white,
-        body: Padding(
-          padding: const EdgeInsets.all(15.0),
+    return Scaffold(
+      backgroundColor: Colors.white,
+      body: Padding(
+        padding: const EdgeInsets.only(right: 15.0, left: 15, top: 40),
+        child: SingleChildScrollView(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
@@ -30,68 +33,55 @@ class LoginScreen extends StatelessWidget {
               Center(
                 child: Text(
                   AppStrings.welcomeBack,
-                  style: TextStyle(
-                    color: AppColors.black,
-                    fontSize: 32,
-                    fontWeight: FontWeight.w600,
-                  ),
+                  style: AppTextStyle.styleHeading1(context),
                 ),
               ),
               Center(
                 child: Text(
                   '${AppStrings.appName} ${AppStrings.appSlogan}',
-                  style: TextStyle(
-                    color: AppColors.gray900,
-                    fontSize: 14,
-                    fontWeight: FontWeight.w500,
-                  ),
+                  style: AppTextStyle.styleHeading3Medium(context)
+                      .copyWith(color: AppColors.backgroundTeritary),
                 ),
               ),
-              const SizedBox(
-                height: 30,
+              verticalSpace(
+                30,
               ),
               Text(
                 AppStrings.email,
-                style: TextStyle(
-                  color: AppColors.gray700,
-                  fontSize: 16,
-                  fontWeight: FontWeight.w700,
-                ),
+                style: AppTextStyle.styleBody3(context)
+                    .copyWith(color: AppColors.contentSecondary),
               ),
-              const SizedBox(
-                height: 7,
+              verticalSpace(
+                7,
               ),
-              CustomTextFormFeild(
-                hintText: AppStrings.enterEmail,
+              const CustomTextFormFeild(
+                hintText: AppStrings.emailExample,
                 icon: Icons.email,
               ),
-              const SizedBox(
-                height: 10,
+              verticalSpace(
+                23,
               ),
               Text(
                 AppStrings.password,
-                style: TextStyle(
-                  color: AppColors.gray700,
-                  fontSize: 16,
-                  fontWeight: FontWeight.w700,
-                ),
+                style: AppTextStyle.styleBody3(context)
+                    .copyWith(color: AppColors.contentSecondary),
               ),
-              const SizedBox(
-                height: 7,
+              verticalSpace(
+                7,
               ),
-              CustomTextFormFeild(
-                hintText: AppStrings.enterpass,
+              const CustomTextFormFeild(
+                hintText: AppStrings.passwordExample,
                 icon: Icons.password_outlined,
               ),
-              const SizedBox(
-                height: 25,
+              verticalSpace(
+                50,
               ),
               const Center(
                   child: CustomElevatedBottom(
                 text: AppStrings.login,
               )),
-              const SizedBox(
-                height: 20,
+              verticalSpace(
+                25,
               ),
               Center(
                 child: SizedBox(
@@ -136,7 +126,13 @@ class LoginScreen extends StatelessWidget {
                   CustomSocialMediaAuth(imagePath: AppImages.googleLogo),
                   CustomSocialMediaAuth(imagePath: AppImages.appleLogo),
                 ],
-              )
+              ),
+              verticalSpace(
+                20,
+              ),
+              const Center(
+                child: SignUpTextSpan(),
+              ),
             ],
           ),
         ),
