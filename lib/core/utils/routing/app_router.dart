@@ -1,45 +1,71 @@
+import 'package:e_commerce_app/core/utils/models/product_model.dart';
 import 'package:e_commerce_app/core/utils/routing/app_routes.dart';
+import 'package:e_commerce_app/features/Auth/views/login_screen.dart';
+import 'package:e_commerce_app/features/Auth/views/sign_up_screen.dart';
+import 'package:e_commerce_app/features/browse/browse_result/view/browse_result.dart';
+import 'package:e_commerce_app/features/browse/view/browse_view.dart';
+import 'package:e_commerce_app/features/cart/cart_view.dart';
 import 'package:e_commerce_app/features/favorite/view/favorite_view.dart';
 import 'package:e_commerce_app/features/home/views/home_view.dart';
 import 'package:e_commerce_app/features/product/view/product_view.dart';
+import 'package:e_commerce_app/features/profile/views/profile_screen.dart';
+import 'package:e_commerce_app/main_screen.dart';
 import 'package:flutter/material.dart';
 
-import '../../../view/on_bording/onbording_view.dart';
+import '../../../features/on_bording/onbording_view.dart';
 
 class AppRouter {
   final bool isFirstTime;
   const AppRouter({required this.isFirstTime});
 
   Route onGenerateRoute(RouteSettings settings) {
+    final args = settings.arguments;
+
     switch (settings.name) {
       case AppRoutes.onBoarding:
-        // Replace this with the on boarding screen
         return MaterialPageRoute(
             builder: (_) => const Scaffold(body: OnBordingView()));
-      case AppRoutes.register:
-        // Replace this with the register screen
+      case AppRoutes.signUp:
         return MaterialPageRoute(
-            builder: (_) =>
-                const Scaffold(body: Center(child: Text('Register Screen'))));
+          builder: (_) => const SignUpScreen(),
+        );
       case AppRoutes.login:
-        // Replace this with the login screen
         return MaterialPageRoute(
-            builder: (_) =>
-                const Scaffold(body: Center(child: Text('Login Screen'))));
+          builder: (_) => const LoginScreen(),
+        );
+      case AppRoutes.mainScreen:
+        return MaterialPageRoute(
+          builder: (_) => const MainScreen(),
+        );
       case AppRoutes.home:
-        // Replace this with the home screen
         return MaterialPageRoute(
           builder: (_) => const HomeView(),
         );
       case AppRoutes.product:
-        // Replace this with the home screen
         return MaterialPageRoute(
-          builder: (_) => const ProductView(),
+          builder: (_) => ProductView(
+            product: args as ProductModel,
+          ),
         );
       case AppRoutes.favorite:
-        // Replace this with the home screen
         return MaterialPageRoute(
           builder: (_) => const FavoriteView(),
+        );
+      case AppRoutes.cart:
+        return MaterialPageRoute(
+          builder: (_) => const CartView(),
+        );
+      case AppRoutes.browse:
+        return MaterialPageRoute(
+          builder: (_) => const BrowseView(),
+        );
+      case AppRoutes.browseResult:
+        return MaterialPageRoute(
+          builder: (_) => const BrowseResultView(),
+        );
+      case AppRoutes.profile:
+        return MaterialPageRoute(
+          builder: (_) => const ProfileScreen(),
         );
       default:
         return MaterialPageRoute(

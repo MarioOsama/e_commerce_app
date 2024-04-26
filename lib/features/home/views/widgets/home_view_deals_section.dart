@@ -67,7 +67,7 @@ class _HomeViewDealsSectionState extends State<HomeViewDealsSection> {
   }
 
   void _animatePageView() {
-    Timer.periodic(const Duration(seconds: 5), (Timer timer) {
+    Timer.periodic(const Duration(seconds: 3), (Timer timer) {
       if (activeIndex < widget.products.length - 1) {
         activeIndex++;
       } else {

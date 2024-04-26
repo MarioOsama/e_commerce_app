@@ -4,7 +4,6 @@ import 'package:e_commerce_app/generated/l10n.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 
-
 class EcommerceApp extends StatelessWidget {
   final AppRouter appRouter;
   const EcommerceApp({super.key, required this.appRouter});
@@ -12,16 +11,16 @@ class EcommerceApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-       localizationsDelegates: const[
-                S.delegate,
-                GlobalMaterialLocalizations.delegate,
-                GlobalWidgetsLocalizations.delegate,
-                GlobalCupertinoLocalizations.delegate,
-            ],
-            supportedLocales: S.delegate.supportedLocales,
+      localizationsDelegates: const [
+        S.delegate,
+        GlobalMaterialLocalizations.delegate,
+        GlobalWidgetsLocalizations.delegate,
+        GlobalCupertinoLocalizations.delegate,
+      ],
+      supportedLocales: S.delegate.supportedLocales,
       debugShowCheckedModeBanner: false,
       initialRoute:
-          appRouter.isFirstTime ? AppRoutes.onBoarding : AppRoutes.favorite,
+          appRouter.isFirstTime ? AppRoutes.onBoarding : AppRoutes.mainScreen,
       onGenerateRoute: appRouter.onGenerateRoute,
     );
   }

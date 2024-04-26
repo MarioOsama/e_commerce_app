@@ -1,9 +1,32 @@
+import 'package:e_commerce_app/core/utils/helpers/spacing.dart';
 import 'package:e_commerce_app/core/utils/strings/app_strings.dart';
 import 'package:e_commerce_app/core/utils/theming/app_colors.dart';
+import 'package:e_commerce_app/features/profile/data/models/settings_item_model.dart';
+import 'package:e_commerce_app/features/profile/views/widgets/our_property_right_section.dart';
+import 'package:e_commerce_app/features/profile/views/widgets/settings_item_list_tile_with_trailing_icon.dart';
+import 'package:e_commerce_app/features/profile/views/widgets/theme_mode_list_tile.dart';
+import 'package:e_commerce_app/features/profile/views/widgets/settings_item_list_tile_with_out_trailing_icon.dart';
 import 'package:flutter/material.dart';
 
 class ProfileScreen extends StatelessWidget {
   const ProfileScreen({super.key});
+
+  static const List<SettingsItemModel> settingsItems = [
+    SettingsItemModel(
+      title: AppStrings.personalInformation,
+      subtitle: AppStrings.personalInformation,
+      icon: Icons.person,
+    ),
+    SettingsItemModel(
+      title: AppStrings.lang,
+      icon: Icons.language,
+    ),
+    SettingsItemModel(
+      title: AppStrings.logOut,
+      icon: Icons.logout_outlined,
+      tappable: false,
+    ),
+  ];
 
   @override
   Widget build(BuildContext context) {
@@ -14,112 +37,30 @@ class ProfileScreen extends StatelessWidget {
         padding: const EdgeInsets.only(top: 40.0, right: 10, left: 10),
         child: Column(
           children: [
-            const CircleAvatar(
+            CircleAvatar(
               radius: 70,
-              backgroundColor: Colors.black,
+              backgroundColor: AppColors.backgroundTeritary,
             ),
-            const SizedBox(
-              height: 50,
+            verticalSpace(50),
+            const ThemeModeListTile(),
+            verticalSpace(16),
+            SettingsItemListTileWithTrailingIcon(
+              settingsItem: settingsItems[0],
+              onTap: () {},
             ),
-            const ListTile(
-              title: Text(
-                AppStrings.personalInformation,
-                style: TextStyle(
-                    fontSize: 18,
-                    fontWeight: FontWeight.bold,
-                    color: Colors.black),
-              ),
-              leading: CircleAvatar(
-                backgroundColor: Colors.black,
-                radius: 20,
-                child: Icon(
-                  Icons.person,
-                  color: Colors.white,
-                ),
-              ),
-              trailing: RotatedBox(
-                  quarterTurns: 2,
-                  child: Icon(Icons.arrow_back_ios_new_outlined)),
+            verticalSpace(16),
+            SettingsItemListTileWithTrailingIcon(
+              settingsItem: settingsItems[1],
+              onTap: () {},
             ),
-            const ListTile(
-              title: Text(
-                AppStrings.lang,
-                style: TextStyle(
-                    fontSize: 18,
-                    fontWeight: FontWeight.bold,
-                    color: Colors.black),
-              ),
-              leading: CircleAvatar(
-                backgroundColor: Colors.black,
-                radius: 20,
-                child: Icon(
-                  Icons.language,
-                  color: Colors.white,
-                ),
-              ),
-              trailing: RotatedBox(
-                  quarterTurns: 2,
-                  child: Icon(Icons.arrow_back_ios_new_outlined)),
+            verticalSpace(16),
+            SettingsItemListTileWithOutTrailingIcon(
+              settingsItem: settingsItems[2],
+              onTap: () {},
             ),
-            ListTile(
-                title: const Text(
-                  AppStrings.mode,
-                  style: TextStyle(
-                      fontSize: 18,
-                      fontWeight: FontWeight.bold,
-                      color: Colors.black),
-                ),
-                leading: const CircleAvatar(
-                  backgroundColor: Colors.black,
-                  radius: 20,
-                  child: Icon(
-                    Icons.dark_mode,
-                    color: Colors.white,
-                  ),
-                ),
-                trailing: Switch(
-                    activeColor: Colors.white,
-                    activeTrackColor: Colors.black,
-                    value: true,
-                    onChanged: (value) {})),
-            const ListTile(
-              title: Text(
-                AppStrings.logOut,
-                style: TextStyle(
-                    fontSize: 18,
-                    fontWeight: FontWeight.bold,
-                    color: Colors.black),
-              ),
-              leading: CircleAvatar(
-                backgroundColor: Colors.black,
-                radius: 20,
-                child: Icon(
-                  Icons.logout_outlined,
-                  color: Colors.white,
-                ),
-              ),
-              trailing: RotatedBox(
-                  quarterTurns: 2,
-                  child: Icon(Icons.arrow_back_ios_new_outlined)),
-            ),
+            verticalSpace(16),
             const Expanded(child: SizedBox()),
-            Text(
-              '2024 ©️',
-              style: TextStyle(
-                  color: AppColors.gray700,
-                  fontSize: 15,
-                  fontWeight: FontWeight.bold),
-            ),
-            Text(
-              'Codium team',
-              style: TextStyle(
-                  color: AppColors.gray700,
-                  fontSize: 15,
-                  fontWeight: FontWeight.bold),
-            ),
-            const SizedBox(
-              height: 20,
-            )
+            const OurPropertyRightsSection(),
           ],
         ),
       ),

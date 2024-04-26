@@ -1,4 +1,5 @@
 import 'package:e_commerce_app/core/utils/theming/app_colors.dart';
+import 'package:e_commerce_app/core/utils/theming/app_text_style.dart';
 import 'package:flutter/material.dart';
 
 class CustomElevatedBottom extends StatelessWidget {
@@ -21,10 +22,8 @@ class CustomElevatedBottom extends StatelessWidget {
             padding: const EdgeInsets.symmetric(horizontal: 15.0, vertical: 15),
             child: Text(
               text,
-              style: const TextStyle(
-                color: Colors.white,
-                fontSize: 22,
-                fontWeight: FontWeight.w700,
+              style: AppTextStyle.styleBody1(context).copyWith(
+                color: AppColors.white,
               ),
             ),
           )),

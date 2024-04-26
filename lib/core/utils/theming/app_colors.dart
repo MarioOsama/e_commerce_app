@@ -26,6 +26,9 @@ abstract class AppColors {
   static final Color contentSecondary = colorFromHex('#868D94');
   static final Color contentSale = colorFromHex('#FA254C');
   static final Color backgroundSecondary = colorFromHex('#F5F5F5');
+  static final Color backgroundTeritary = colorFromHex('#495057');
+  static final Color borderColor = colorFromHex('#EFEEEC');
+  static final Color linkColor = colorFromHex('#0080FF');
 
   static final List<Color> linearBoarding = [
     Colors.black,
