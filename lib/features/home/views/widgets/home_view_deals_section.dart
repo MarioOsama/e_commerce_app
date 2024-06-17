@@ -73,11 +73,14 @@ class _HomeViewDealsSectionState extends State<HomeViewDealsSection> {
       } else {
         activeIndex = 0;
       }
-      _pageController.animateToPage(
+      if(_pageController.hasClients) {
+          _pageController.animateToPage(
         activeIndex,
         duration: const Duration(milliseconds: 400),
         curve: Curves.easeIn,
       );
+      }
+    
     });
   }
 
