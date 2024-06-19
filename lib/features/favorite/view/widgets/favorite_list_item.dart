@@ -10,7 +10,7 @@ class FavoriteListItem extends StatelessWidget {
     required this.product,
   });
 
-  final ProductModel product;
+  final Product product;
 
   @override
   Widget build(BuildContext context) {
@@ -18,7 +18,7 @@ class FavoriteListItem extends StatelessWidget {
       children: [
         Flexible(
           child: ListTileProductImage(
-            productImage: product.images.first,
+            productImage: product.image,
           ),
         ),
         Flexible(

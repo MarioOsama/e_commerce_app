@@ -9,62 +9,80 @@ class ProductListView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    List<ProductModel> productModel = [
-      ProductModel(
-        category: "category",
+    const List<Product> products = [
+      Product(
+        id: 1,
+        image: 'assets/img/Sony_Headphones_01.png',
+        category: 'Headphones',
+        title: 'RØDE PodMic',
         price: 108.20,
-        oldPrice: 199.99,
-        name: "RØDE PodMic",
-        subCategories: ['Dynamic microphone', 'Speaker microphone'],
-        rating: 10,
-        description: "description",
-        images: ["assets/img/Sony_Headphones_01.png"],
+        description: 'Dynamic microphone, Speaker microphone',
+        oldPrice: 180.00,
       ),
-      ProductModel(
-        category: "category",
-        price: 108.20,
-        name: "RØDE PodMic",
-        subCategories: ['Dynamic microphone', 'Speaker microphone'],
-        rating: 10,
-        description: "description",
-        images: ["assets/img/Sony_Headphones_01.png"],
+      Product(
+        id: 2,
+        image: 'assets/img/Sony_Headphones_01.png',
+        category: 'Headphones',
+        title: 'RØDE PodMic',
+        price: 349.99,
+        description: 'Dynamic microphone, Speaker microphone',
       ),
-      ProductModel(
-        category: "category",
-        price: 108.20,
-        name: "RØDE PodMic",
-        subCategories: ['Dynamic microphone', 'Speaker microphone'],
-        rating: 10,
-        description: "description",
-        images: ["assets/img/Sony_Headphones_01.png"],
+      Product(
+        id: 3,
+        image: 'assets/img/Sony_Headphones_01.png',
+        category: 'Headphones',
+        title: 'RØDE PodMic',
+        price: 349.99,
+        description: 'Dynamic microphone, Speaker microphone',
       ),
-      ProductModel(
-        category: "category",
-        price: 108.20,
-        name: "RØDE PodMic",
-        subCategories: ['Dynamic microphone', 'Speaker microphone'],
-        rating: 10,
-        description: "description",
-        images: ["assets/img/Sony_Headphones_01.png"],
+      Product(
+        id: 4,
+        image: 'assets/img/Sony_Headphones_01.png',
+        category: 'Headphones',
+        title: 'RØDE PodMic',
+        price: 349.99,
+        description: 'Dynamic microphone, Speaker microphone',
       ),
-      ProductModel(
-        category: "category",
-        price: 108.20,
-        oldPrice: 199.99,
-        name: "RØDE PodMic",
-        subCategories: ['Dynamic microphone', 'Speaker microphone'],
-        rating: 10,
-        description: "description",
-        images: ["assets/img/Sony_Headphones_01.png"],
-      )
+      Product(
+        id: 5,
+        image: 'assets/img/Sony_Headphones_01.png',
+        category: 'Headphones',
+        title: 'RØDE PodMic',
+        price: 349.99,
+        description: 'Dynamic microphone, Speaker microphone',
+      ),
+      Product(
+        id: 6,
+        image: 'assets/img/Sony_Headphones_01.png',
+        category: 'Headphones',
+        title: 'RØDE PodMic',
+        price: 349.99,
+        description: 'Dynamic microphone, Speaker microphone',
+      ),
+      Product(
+        id: 7,
+        image: 'assets/img/Sony_Headphones_01.png',
+        category: 'Headphones',
+        title: 'RØDE PodMic',
+        price: 349.99,
+        description: 'Dynamic microphone, Speaker microphone',
+      ),
+      Product(
+        id: 8,
+        image: 'assets/img/Sony_Headphones_01.png',
+        category: 'Headphones',
+        title: 'RØDE PodMic',
+        price: 349.99,
+        description: 'Dynamic microphone, Speaker microphone',
+      ),
     ];
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 15),
       child: ListView.builder(
-        itemCount: productModel.length,
+        itemCount: products.length,
         itemBuilder: (context, index) {
           return CustomProductCart(
-            product: productModel[index],
+            product: products[index],
           );
         },
       ),

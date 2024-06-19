@@ -11,7 +11,7 @@ class ProductViewTextContent extends StatelessWidget {
     required this.product,
   });
 
-  final ProductModel product;
+  final Product product;
 
   @override
   Widget build(BuildContext context) {
@@ -27,11 +27,11 @@ class ProductViewTextContent extends StatelessWidget {
           ),
           verticalSpace(2),
           Text(
-            product.name,
+            product.title,
             style: AppTextStyle.styleHeading2Semibold(context),
           ),
           verticalSpace(2),
-          if (product.model != null) _buildProductModel(context),
+          if (product.model != null) _buildProduct(context),
           verticalSpace(20),
           Text(
             product.description,
@@ -44,7 +44,7 @@ class ProductViewTextContent extends StatelessWidget {
     );
   }
 
-  Text _buildProductModel(BuildContext context) {
+  Text _buildProduct(BuildContext context) {
     return Text(
       'Model: ${product.model!}',
       style: AppTextStyle.styleBody1(context).copyWith(

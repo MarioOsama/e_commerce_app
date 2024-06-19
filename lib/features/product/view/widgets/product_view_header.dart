@@ -9,7 +9,7 @@ class ProductViewHeader extends StatelessWidget {
     required this.product,
   });
 
-  final ProductModel product;
+  final Product product;
 
   @override
   Widget build(BuildContext context) {
@@ -18,7 +18,7 @@ class ProductViewHeader extends StatelessWidget {
       children: [
         AspectRatio(
           aspectRatio: 1,
-          child: ProductImage(image: product.images.first),
+          child: ProductImage(image: product.image),
         ),
         const ActionButtons(),
       ],

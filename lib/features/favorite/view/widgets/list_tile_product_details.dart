@@ -10,7 +10,7 @@ class ListTileProductDetails extends StatelessWidget {
     required this.product,
   });
 
-  final ProductModel product;
+  final Product product;
 
   @override
   Widget build(BuildContext context) {
@@ -19,7 +19,7 @@ class ListTileProductDetails extends StatelessWidget {
       children: [
         ProductPrice(product: product),
         Text(
-          product.name,
+          product.title,
           style: AppTextStyle.styleHeading3Medium(context),
           maxLines: 2,
           overflow: TextOverflow.ellipsis,

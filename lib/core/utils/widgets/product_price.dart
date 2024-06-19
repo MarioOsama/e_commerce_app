@@ -7,7 +7,7 @@ import 'package:flutter/material.dart';
 class ProductPrice extends StatelessWidget {
   const ProductPrice({super.key, required this.product, this.isBig = false});
 
-  final ProductModel product;
+  final Product product;
   final bool isBig;
 
   @override

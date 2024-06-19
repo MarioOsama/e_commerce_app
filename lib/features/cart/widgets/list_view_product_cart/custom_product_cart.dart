@@ -12,7 +12,7 @@ class CustomProductCart extends StatelessWidget {
     required this.product,
   });
 
-  final ProductModel product;
+  final Product product;
 
   @override
   Widget build(BuildContext context) {
@@ -24,7 +24,7 @@ class CustomProductCart extends StatelessWidget {
           // * Product Image
           Expanded(
               child: ProductImage(
-            image: product.images.first,
+            image: product.image,
           )),
           const SizedBox(
             width: 5,

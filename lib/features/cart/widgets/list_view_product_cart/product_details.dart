@@ -9,7 +9,7 @@ class ProductDetails extends StatelessWidget {
     required this.product,
   });
 
-  final ProductModel product;
+  final Product product;
 
   @override
   Widget build(BuildContext context) {
@@ -20,16 +20,16 @@ class ProductDetails extends StatelessWidget {
         ProductPrice(product: product),
         // * Product Name
         Text(
-          product.name,
+          product.title,
           style: AppTextStyle.styleHeading3Medium(context),
         ),
         // * Product Description
-        Text(
-          product.subCategories.join(", "),
-          style: AppTextStyle.styleCaption1(context).copyWith(
-            color: Colors.black38,
-          ),
-        ),
+        // Text(
+        //   product.subCategories.join(", "),
+        //   style: AppTextStyle.styleCaption1(context).copyWith(
+        //     color: Colors.black38,
+        //   ),
+        // ),
       ],
     );
   }
