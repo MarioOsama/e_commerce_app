@@ -10,7 +10,7 @@ class ProductListView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     List<ProductModel> productModel = [
-      const ProductModel(
+      ProductModel(
         category: "category",
         price: 108.20,
         oldPrice: 199.99,
@@ -20,7 +20,7 @@ class ProductListView extends StatelessWidget {
         description: "description",
         images: ["assets/img/Sony_Headphones_01.png"],
       ),
-      const ProductModel(
+      ProductModel(
         category: "category",
         price: 108.20,
         name: "RØDE PodMic",
@@ -29,7 +29,7 @@ class ProductListView extends StatelessWidget {
         description: "description",
         images: ["assets/img/Sony_Headphones_01.png"],
       ),
-      const ProductModel(
+      ProductModel(
         category: "category",
         price: 108.20,
         name: "RØDE PodMic",
@@ -38,7 +38,7 @@ class ProductListView extends StatelessWidget {
         description: "description",
         images: ["assets/img/Sony_Headphones_01.png"],
       ),
-      const ProductModel(
+      ProductModel(
         category: "category",
         price: 108.20,
         name: "RØDE PodMic",
@@ -47,7 +47,7 @@ class ProductListView extends StatelessWidget {
         description: "description",
         images: ["assets/img/Sony_Headphones_01.png"],
       ),
-      const ProductModel(
+      ProductModel(
         category: "category",
         price: 108.20,
         oldPrice: 199.99,
