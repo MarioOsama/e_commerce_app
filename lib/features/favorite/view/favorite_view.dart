@@ -2,7 +2,6 @@ import 'package:e_commerce_app/core/utils/models/product_model.dart';
 import 'package:e_commerce_app/core/utils/widgets/custom_app_bar.dart';
 import 'package:e_commerce_app/features/favorite/view/widgets/favorite_list_view.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 
 class FavoriteView extends StatelessWidget {
   const FavoriteView({super.key});

@@ -2,7 +2,6 @@ import 'package:e_commerce_app/core/utils/helpers/extensions.dart';
 import 'package:e_commerce_app/core/utils/models/product_model.dart';
 import 'package:e_commerce_app/core/utils/routing/app_routes.dart';
 import 'package:e_commerce_app/core/utils/widgets/product_card.dart';
-import 'package:e_commerce_app/features/product/view/product_view.dart';
 import 'package:flutter/material.dart';
 
 class RecommendedSectionGridView extends StatelessWidget {
