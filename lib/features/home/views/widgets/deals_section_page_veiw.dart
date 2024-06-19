@@ -11,7 +11,7 @@ class DealsSectionPageView extends StatelessWidget {
   }) : _pageController = pageController;
 
   final PageController _pageController;
-  final List<ProductModel> products;
+  final List<Product> products;
 
   @override
   Widget build(BuildContext context) {

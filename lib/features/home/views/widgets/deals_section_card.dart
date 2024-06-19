@@ -14,7 +14,7 @@ class DealsSectionCard extends StatelessWidget {
     required this.product,
   });
 
-  final ProductModel product;
+  final Product product;
 
   @override
   Widget build(BuildContext context) {
@@ -36,7 +36,7 @@ class DealsSectionCard extends StatelessWidget {
             children: [
               Expanded(
                 child: Image.asset(
-                  product.images.first,
+                  product.image,
                 ),
               ),
               horizontalSpace(8.0),
@@ -63,7 +63,6 @@ class DealsSectionCard extends StatelessWidget {
   }
 
   Column _buildCardContent(BuildContext context) {
-    final double width = MediaQuery.of(context).size.width;
     return Column(
       mainAxisAlignment: MainAxisAlignment.center,
       crossAxisAlignment: CrossAxisAlignment.start,
@@ -79,31 +78,31 @@ class DealsSectionCard extends StatelessWidget {
         ),
         verticalSpace(4.0),
         Text(
-          product.name,
+          product.title,
           style: AppTextStyle.styleHeading3Bold(context).copyWith(
             color: AppColors.contentPrimary,
           ),
         ),
         verticalSpace(2.0),
-        SizedBox(
-          width: width * 0.3,
-          child: _buildSubCategoriesText(context),
-        ),
+        // SizedBox(
+        //   width: width * 0.3,
+        //   child: _buildSubCategoriesText(context),
+        // ),
       ],
     );
   }
 
-  Text _buildSubCategoriesText(BuildContext context) {
-    final String subCategories = product.subCategories.join(', ');
-    return Text(
-      subCategories,
-      style: AppTextStyle.styleCaption1(context).copyWith(
-        fontSize: 11,
-        fontWeight: FontWeight.w500,
-        color: AppColors.contentSecondary,
-      ),
-      maxLines: 2,
-      overflow: TextOverflow.ellipsis,
-    );
-  }
+  // Text _buildSubCategoriesText(BuildContext context) {
+  //   final String subCategories = product.subCategories.join(', ');
+  //   return Text(
+  //     subCategories,
+  //     style: AppTextStyle.styleCaption1(context).copyWith(
+  //       fontSize: 11,
+  //       fontWeight: FontWeight.w500,
+  //       color: AppColors.contentSecondary,
+  //     ),
+  //     maxLines: 2,
+  //     overflow: TextOverflow.ellipsis,
+  //   );
+  // }
 }

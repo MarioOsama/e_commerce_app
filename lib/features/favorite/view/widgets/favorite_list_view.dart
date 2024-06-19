@@ -10,7 +10,7 @@ class FavoriteListView extends StatelessWidget {
     required this.favoriteProducts,
   });
 
-  final List<ProductModel> favoriteProducts;
+  final List<Product> favoriteProducts;
 
   @override
   Widget build(BuildContext context) {

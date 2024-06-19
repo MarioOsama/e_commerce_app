@@ -1,28 +1,30 @@
-import 'package:uuid/uuid.dart';
+import 'package:json_annotation/json_annotation.dart';
 
-const uuid = Uuid();
+part 'product_model.g.dart';
 
-// TODO: Add ID field to the model
-class ProductModel {
-  final String category;
+@JsonSerializable()
+class Product {
+  final int id;
+  final String title;
   final double price;
-  final double? oldPrice;
-  final String name;
-  final double rating;
-  final List<String> subCategories;
+  final String category;
   final String description;
-  final List<String> images;
+  final String image;
   final String? model;
+  final double? oldPrice;
 
-  const ProductModel({
+  const Product({
     this.model,
     this.oldPrice,
-    required this.category,
+    required this.id,
+    required this.title,
     required this.price,
-    required this.name,
-    required this.subCategories,
-    required this.rating,
+    required this.category,
     required this.description,
-    required this.images,
+    required this.image,
   });
+
+  factory Product.fromJson(json) => _$ProductFromJson(json);
+
+  Map<String, dynamic> toJson() => _$ProductToJson(this);
 }

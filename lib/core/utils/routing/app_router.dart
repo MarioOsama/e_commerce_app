@@ -44,7 +44,7 @@ class AppRouter {
       case AppRoutes.product:
         return MaterialPageRoute(
           builder: (_) => ProductView(
-            product: args as ProductModel,
+            product: args as Product,
           ),
         );
       case AppRoutes.favorite:

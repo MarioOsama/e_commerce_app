@@ -8,7 +8,7 @@ import 'package:flutter/material.dart';
 class ProductView extends StatelessWidget {
   const ProductView({super.key, required this.product});
 
-  final ProductModel product;
+  final Product product;
 
   @override
   Widget build(BuildContext context) {

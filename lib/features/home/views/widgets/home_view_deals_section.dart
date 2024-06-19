@@ -13,34 +13,31 @@ class HomeViewDealsSection extends StatefulWidget {
     super.key,
   });
 
-  final List<ProductModel> products = const [
-    ProductModel(
-      images: ['assets/img/Sony_Headphones_01.png'],
+  final List<Product> products = const [
+    Product(
+      id: 1,
+      image: 'assets/img/Sony_Headphones_01.png',
       category: 'Headphones',
-      name: 'RØDE PodMic',
+      title: 'RØDE PodMic',
       price: 108.20,
       description: 'Dynamic microphone, Speaker microphone',
-      subCategories: ['Dynamic microphone', 'Speaker microphone'],
       oldPrice: 199.99,
-      rating: 4.5,
     ),
-    ProductModel(
-      images: ['assets/img/Sony_Headphones_01.png'],
+    Product(
+      id: 2,
+      image: 'assets/img/Sony_Headphones_01.png',
       category: 'Headphones',
-      name: 'RØDE PodMic',
+      title: 'RØDE PodMic',
       price: 349.99,
       description: 'Dynamic microphone, Speaker microphone',
-      subCategories: ['Dynamic microphone', 'Speaker microphone'],
-      rating: 4.5,
     ),
-    ProductModel(
-      images: ['assets/img/Sony_Headphones_01.png'],
+    Product(
+      id: 3,
+      image: 'assets/img/Sony_Headphones_01.png',
       category: 'Headphones',
-      name: 'RØDE PodMic',
+      title: 'RØDE PodMic',
       price: 349.99,
       description: 'Dynamic microphone, Speaker microphone',
-      subCategories: ['Dynamic microphone', 'Speaker microphone'],
-      rating: 4.5,
     ),
   ];
 
@@ -73,14 +70,13 @@ class _HomeViewDealsSectionState extends State<HomeViewDealsSection> {
       } else {
         activeIndex = 0;
       }
-      if(_pageController.hasClients) {
-          _pageController.animateToPage(
-        activeIndex,
-        duration: const Duration(milliseconds: 400),
-        curve: Curves.easeIn,
-      );
+      if (_pageController.hasClients) {
+        _pageController.animateToPage(
+          activeIndex,
+          duration: const Duration(milliseconds: 400),
+          curve: Curves.easeIn,
+        );
       }
-    
     });
   }
 

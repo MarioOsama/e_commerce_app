@@ -6,78 +6,71 @@ import 'package:flutter/material.dart';
 class FavoriteView extends StatelessWidget {
   const FavoriteView({super.key});
 
-  static const List<ProductModel> favoriteProducts = [
-    ProductModel(
-      images: ['assets/img/Sony_Headphones_01.png'],
+  static const List<Product> favoriteProducts = [
+    Product(
+      id: 1,
+      image: 'assets/img/Sony_Headphones_01.png',
       category: 'Headphones',
-      name: 'SONY Premium Wireless Headphones',
+      title: 'RØDE PodMic',
       price: 108.20,
-      description:
-          'The technology with two noise sensors and two microphones on each ear cup detects ambient noise and sends the data to the HD noise minimization processor QN1. Using a new algorithm, the QN1 then processes and minimizes noise for different acoustic environments in real time. Together with a new Bluetooth Audio SoC ',
-      subCategories: ['Dynamic microphone', 'Speaker microphone'],
-      oldPrice: 199.99,
-      rating: 4.5,
-      model: 'WH-1000XM4, Black',
+      description: 'Dynamic microphone, Speaker microphone',
+      oldPrice: 180.00,
     ),
-    ProductModel(
-      images: ['assets/img/Sony_Headphones_01.png'],
+    Product(
+      id: 2,
+      image: 'assets/img/Sony_Headphones_01.png',
       category: 'Headphones',
-      name: 'SONY Premium Wireless Headphones',
-      price: 108.20,
-      description:
-          'The technology with two noise sensors and two microphones on each ear cup detects ambient noise and sends the data to the HD noise minimization processor QN1. Using a new algorithm, the QN1 then processes and minimizes noise for different acoustic environments in real time. Together with a new Bluetooth Audio SoC ',
-      subCategories: ['Dynamic microphone', 'Speaker microphone'],
-      // oldPrice: 199.99,
-      rating: 4.5,
-      model: 'WH-1000XM4, Black',
+      title: 'RØDE PodMic',
+      price: 349.99,
+      description: 'Dynamic microphone, Speaker microphone',
     ),
-    ProductModel(
-      images: ['assets/img/Sony_Headphones_01.png'],
+    Product(
+      id: 3,
+      image: 'assets/img/Sony_Headphones_01.png',
       category: 'Headphones',
-      name: 'SONY Premium Wireless Headphones',
-      price: 108.20,
-      description:
-          'The technology with two noise sensors and two microphones on each ear cup detects ambient noise and sends the data to the HD noise minimization processor QN1. Using a new algorithm, the QN1 then processes and minimizes noise for different acoustic environments in real time. Together with a new Bluetooth Audio SoC ',
-      subCategories: ['Dynamic microphone', 'Speaker microphone'],
-      // oldPrice: 199.99,
-      rating: 4.5,
-      model: 'WH-1000XM4, Black',
+      title: 'RØDE PodMic',
+      price: 349.99,
+      description: 'Dynamic microphone, Speaker microphone',
     ),
-    ProductModel(
-      images: ['assets/img/Sony_Headphones_01.png'],
+    Product(
+      id: 4,
+      image: 'assets/img/Sony_Headphones_01.png',
       category: 'Headphones',
-      name: 'SONY Premium Wireless Headphones',
-      price: 108.20,
-      description:
-          'The technology with two noise sensors and two microphones on each ear cup detects ambient noise and sends the data to the HD noise minimization processor QN1. Using a new algorithm, the QN1 then processes and minimizes noise for different acoustic environments in real time. Together with a new Bluetooth Audio SoC ',
-      subCategories: ['Dynamic microphone', 'Speaker microphone'],
-      oldPrice: 199.99,
-      rating: 4.5,
-      model: 'WH-1000XM4, Black',
+      title: 'RØDE PodMic',
+      price: 349.99,
+      description: 'Dynamic microphone, Speaker microphone',
     ),
-    ProductModel(
-      images: ['assets/img/Sony_Headphones_01.png'],
+    Product(
+      id: 5,
+      image: 'assets/img/Sony_Headphones_01.png',
       category: 'Headphones',
-      name: 'SONY Premium Wireless Headphones',
-      price: 108.20,
-      description:
-          'The technology with two noise sensors and two microphones on each ear cup detects ambient noise and sends the data to the HD noise minimization processor QN1. Using a new algorithm, the QN1 then processes and minimizes noise for different acoustic environments in real time. Together with a new Bluetooth Audio SoC ',
-      subCategories: ['Dynamic microphone', 'Speaker microphone'],
-      // oldPrice: 199.99,
-      rating: 4.5,
-      model: 'WH-1000XM4, Black',
+      title: 'RØDE PodMic',
+      price: 349.99,
+      description: 'Dynamic microphone, Speaker microphone',
     ),
-    ProductModel(
-      images: ['assets/img/Sony_Headphones_01.png'],
+    Product(
+      id: 6,
+      image: 'assets/img/Sony_Headphones_01.png',
       category: 'Headphones',
-      name: 'SONY Premium Wireless Headphones',
-      price: 108.20,
-      description:
-          'The technology with two noise sensors and two microphones on each ear cup detects ambient noise and sends the data to the HD noise minimization processor QN1. Using a new algorithm, the QN1 then processes and minimizes noise for different acoustic environments in real time. Together with a new Bluetooth Audio SoC ',
-      subCategories: ['Dynamic microphone', 'Speaker microphone'],
-      // oldPrice: 199.99,
-      rating: 4.5,
-      model: 'WH-1000XM4, Black',
+      title: 'RØDE PodMic',
+      price: 349.99,
+      description: 'Dynamic microphone, Speaker microphone',
+    ),
+    Product(
+      id: 7,
+      image: 'assets/img/Sony_Headphones_01.png',
+      category: 'Headphones',
+      title: 'RØDE PodMic',
+      price: 349.99,
+      description: 'Dynamic microphone, Speaker microphone',
+    ),
+    Product(
+      id: 8,
+      image: 'assets/img/Sony_Headphones_01.png',
+      category: 'Headphones',
+      title: 'RØDE PodMic',
+      price: 349.99,
+      description: 'Dynamic microphone, Speaker microphone',
     ),
   ];
 

@@ -13,7 +13,7 @@ class ProductCard extends StatelessWidget {
     required this.product,
   });
 
-  final ProductModel product;
+  final Product product;
 
   @override
   Widget build(BuildContext context) {
@@ -38,7 +38,7 @@ class ProductCard extends StatelessWidget {
           ),
           child: Center(
             child: Image.asset(
-              product.images.first,
+              product.image,
             ),
           ),
         ),
@@ -61,7 +61,7 @@ class ProductCard extends StatelessWidget {
           ProductPrice(product: product),
           verticalSpace(2),
           Text(
-            product.name,
+            product.title,
             style: AppTextStyle.styleHeading3Medium(context),
           ),
         ],
